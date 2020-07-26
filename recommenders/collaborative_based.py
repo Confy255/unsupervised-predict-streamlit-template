@@ -90,7 +90,7 @@ def pred_movies(movie_list):
     # For each movie selected by a user of the app,
     # predict a corresponding user within the dataset with the highest rating
     for i in movie_list:
-        predictions = prediction_item(item_id = i)
+        predictions = prediction_item(item_id=i)
         predictions.sort(key=lambda x: x.est, reverse=True)
         # Take the top 10 user id's from each movie with highest rankings
         for pred in predictions[:10]:
